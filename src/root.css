@@ -1,0 +1,18 @@
+:root{
+  /* COLORS */
+  --dark-blue-700: #171a21;
+  --dark-blue-500: #1b2838;
+  --dark-blue-300: #2a475e;
+  --light-blue-500: #66c0f4;
+  --light-blue-300: #c7d5e0;
+  --green-500: #00712D;
+  --red-500: #800000;
+
+  /* FONTS */
+  --font-heading: 'Archivo Black', sans-serif;
+  --font-paragraph: 'Poppins', sans-serif;
+
+  --fw-bold: 700;
+  --fw-normal: 500;
+  --fw-thin: 300;
+}

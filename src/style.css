@@ -1,0 +1,358 @@
+@import './root.css';
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3{
+  font-family: var(--font-heading);
+  color: var(--light-blue-300);
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+h2{
+  font-size: 2.875rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+p{
+  font-family: var(--font-paragraph);
+  color: #FEFEFE;
+}
+
+body{
+  background: var(--dark-blue-700);
+  font-size: 1rem;
+  font-family: var(--font-paragraph);
+  color: #FFF;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* NAVBAR */
+nav{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--dark-blue-300);
+}
+
+.logo{
+    text-decoration: none;
+    color: var(--light-blue-300);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    
+}
+
+/* HOME PAGE */
+.add-review-btn{
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 6rem;
+  width: fit-content;
+  background-size: 55px;
+  background-position: center left 20px;
+  background-color: var(--dark-blue-500);
+  border-radius: 12px;
+  background-image: url(./assets/icons/add-icon.svg);
+  background-repeat: no-repeat;
+}
+
+.add-review-btn:hover{
+  opacity: .9;
+}
+
+.review-card{
+  display: block;
+  background: var(--dark-blue-500);
+  width: 60%;
+  max-height: 300px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 1em;
+  margin-top: 3rem;
+}
+
+.review-lists:last-child{
+  padding-bottom: 3rem;
+}
+
+.review-card .img-container{
+  background-color: var(--dark-blue-300);
+  display: inline-flex;
+  border-radius: 12px;
+  padding: .3rem;
+  width: 500px;
+  aspect-ratio: 1;
+  flex: 1;
+}
+
+.review-card .game-img{
+  border-radius: 8px;
+  width: 100%;
+}
+
+.review-card .container{
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.review-card .text-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  flex: 3;
+}
+
+.review-card .text-container .read-more-btn{
+  text-decoration: none;
+  color: var(--light-blue-500);
+  font-weight: var(--fw-bold);
+  align-self: flex-end;
+  font-size: .825rem;
+}
+
+.review-card .btn-container{
+  flex: 1;
+  align-self: flex-start;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 1em;
+  margin-right: 12px;
+}
+
+.game-title, .game-name{
+  font-size: 1.3rem;
+}
+
+.game-review-content{
+  font-size: .825rem;
+}
+
+/* ADD REVIEW PAGE */
+.add-review-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+  padding-bottom: 2rem;
+}
+
+input[type="file"]{
+  display: none;
+}
+
+.add-review-container .add-img-container{
+  background: var(--light-blue-300);
+  border-radius: 24px;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  place-items: center;
+  color: var(--dark-blue-300);
+  cursor: pointer;
+}
+
+.add-review-container form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-review-container form .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.add-review-container form .container label{
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.add-review-container form .container input{
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--dark-blue-300);
+  outline: none;
+  padding-bottom: .3em;
+  color: var(--light-blue-300);
+  padding-left: .5rem;
+}
+
+.add-review-container form .container:nth-child(5) label{
+  align-self: flex-start;
+}
+
+.add-review-container form .container textarea{
+  border: none;
+  background-color: var(--dark-blue-500);
+  border-radius: 12px;
+  outline: none;
+  color: var(--light-blue-300);
+  padding-left: .5rem;
+  padding-top: 1rem;
+  resize: vertical;
+  height: 200px;
+}
+
+.add-review-container form:last-child .btn-container{
+  display: inline-flex;
+  align-self: center;
+  justify-self: center;
+  padding-top: 1rem;
+}
+
+.add-review-container form:last-child .btn-container .submit-btn{
+  margin-left: 120px;
+  background-color: var(--green-500);
+  border: none;
+  border-radius: 12px;
+  color: #FFF;
+  padding: .7em 2em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+
+.add-review-container form:last-child .btn-container .submit-btn:hover{
+  opacity: .7;
+}
+
+/* GAME REVIEW PAGE */
+
+.game-review-page{
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-review-page header{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.game-review-page header .game-cover{
+  border-radius: 16px;
+  border: 2px solid var(--dark-blue-300);
+  width: 450px;
+  aspect-ratio: 1;
+}
+
+.game-review-page header .btn-container{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.edit-btn:hover, .delete-btn:hover{
+  opacity: .7; 
+}
+
+.game-review-page .game-review-details{
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 5rem;
+  gap: 1rem;
+}
+
+.game-review-page .game-review-details h2{
+  color: var(--light-blue-500);
+}
+
+.game-review-page .game-review-details p{
+  font-size: 1.3rem;
+  padding-top: 2.5rem;
+  text-align: justify;
+}
+
+.game-review-page .back-button{
+  background: var(--green-500);
+  border: none;
+  color: #FFF;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  padding: 1rem 5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 12px;
+  align-self: center;
+  text-decoration: none;
+}
+
+.game-review-page .back-button:hover{
+  opacity: .7;
+}
+
+/* ERROR PAGE */
+.error-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 9rem;
+}
+
+.error-page p{
+  font-size: 1.2rem;
+}
+
+.error-page .back-to-home{
+  margin-top: 3rem;
+  text-decoration: none;
+  color: var(--light-blue-500);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+}
+
+.error-page .back-to-home:hover{
+  opacity: .7;
+}
